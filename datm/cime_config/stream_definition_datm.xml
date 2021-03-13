@@ -38,6 +38,7 @@
   CORE_IAF_JRA          = JRA55 intra-annual year forcing (for forcing POP and CICE)
   CORE_IAF_JRA_1p4_2018 = JRA55 intra-annual year forcing, v1.4, through 2018 (for forcing POP and CICE)
   ERA5                  = ERA5 intra-annual year forcing
+  MEP13                 = MPAS-generated Eastpac forcing (May-Aug 2013)
   CPLHIST               = Streams for lnd or ocn/ice forcing used for spinup
 
   Currently the following optional streams are supported
@@ -2368,6 +2369,51 @@
     <stream_year_align>1900</stream_year_align>
     <stream_year_first>2019</stream_year_first>
     <stream_year_last>2019</stream_year_last>
+    <stream_offset>0</stream_offset>
+    <stream_tintalgo>
+      <tintalgo>linear</tintalgo>
+    </stream_tintalgo>
+    <stream_taxmode>
+      <taxmode>cycle</taxmode>
+    </stream_taxmode>
+    <stream_dtlimit>
+      <dtlimit>1.5</dtlimit>
+    </stream_dtlimit>
+    <stream_readmode>single</stream_readmode>
+  </stream_entry>
+
+  <!-- ===================-->
+  <!--  MEP13 stream       -->
+  <!-- ===================-->
+
+  <stream_entry name="MEP13.UV">
+    <stream_meshfile>
+      <meshfile>/glade/work/altuntas/cesm.input/mesh/mpas_ep/mpas_ep_210301_ESMFmesh.nc</meshfile>
+    </stream_meshfile>
+    <!--<stream_datafiles>
+      <file>/glade/scratch/altuntas/mpas_streams/diag_mom6.2013-05-01.nc</file>
+      <file>/glade/scratch/altuntas/mpas_streams/diag_mom6.2013-05-02.nc</file>
+      <file>/glade/scratch/altuntas/mpas_streams/diag_mom6.2013-05-03.nc</file>
+      <file>/glade/scratch/altuntas/mpas_streams/diag_mom6.2013-05-04.nc</file>
+      <file>/glade/scratch/altuntas/mpas_streams/diag_mom6.2013-05-05.nc</file>
+    </stream_datafiles> -->
+    <stream_datafiles>
+      <file first_year="1958" last_year="2016">$DIN_LOC_ROOT/ocn/jra55/v1.3_noleap/JRA.v1.3.t_10.TL319.%y.171019.nc</file>
+    </stream_datafiles>
+    <stream_datavars>
+      <var>u10   Sa_u</var>
+      <var>v10   Sa_v</var>
+    </stream_datavars>
+    <stream_lev_dimname>null</stream_lev_dimname>
+    <stream_mapalgo>
+      <mapalgo>bilinear</mapalgo>
+      <mapalgo model_grid="1x1">nn</mapalgo>
+    </stream_mapalgo>
+    <!-- <stream_vectors>u:v taux:tauy</stream_vectors> -->
+    <stream_vectors>u:v</stream_vectors>
+    <stream_year_align>1</stream_year_align>
+    <stream_year_first>2013</stream_year_first>
+    <stream_year_last>2013</stream_year_last>
     <stream_offset>0</stream_offset>
     <stream_tintalgo>
       <tintalgo>linear</tintalgo>

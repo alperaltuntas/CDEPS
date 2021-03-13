@@ -53,6 +53,9 @@
       <value datm_mode="ERA5">
         ERA5_HOURLY
       </value>
+      <value datm_mode="MEP13">
+        MEP13.UV,CORE_IAF_JRA.PREC,CORE_IAF_JRA.LWDN,CORE_IAF_JRA.SWDN,CORE_IAF_JRA.Q_10,CORE_IAF_JRA.SLP_,CORE_IAF_JRA.T_10,CORE_IAF_JRA.CORE2.ArcFactor
+      </value>
       <value datm_mode="CPLHIST">
         CPLHISTForcing.Solar,CPLHISTForcing.nonSolarFlux,CPLHISTForcing.State3hr,CPLHISTForcing.State1hr
       </value>
@@ -63,7 +66,7 @@
     <type>char</type>
     <category>datm</category>
     <group>datm_nml</group>
-    <valid_values>CLMNCEP,CORE2_NYF,CORE2_IAF,CORE_IAF_JRA,ERA5,CPLHIST</valid_values>
+    <valid_values>CLMNCEP,CORE2_NYF,CORE2_IAF,CORE_IAF_JRA,ERA5,MEP13,CPLHIST</valid_values>
     <desc>
       general method that operates on the data.
       ----datamode = "CPLHIST"----
@@ -97,6 +100,8 @@
       active-land-only simulations.
       ----datamode = "ERA5"----
       Fifth generation ECMWF atmospheric reanalysis of the global climate
+      ----datamode = "MEP13"----
+      MPAS-generated Eastpac forcing (May-Aug 2013)
     </desc>
     <values>
       <value datm_mode="CLM">
@@ -116,6 +121,9 @@
       </value>
       <value datm_mode="ERA5">
         ERA5
+      </value>
+      <value datm_mode="MEP13">
+        MEP13
       </value>
       <value datm_mode="CPLHIST">
         CPLHIST
