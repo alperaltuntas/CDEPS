@@ -2390,15 +2390,11 @@
     <stream_meshfile>
       <meshfile>/glade/work/altuntas/cesm.input/mesh/mpas_ep/mpas_ep_210301_ESMFmesh.nc</meshfile>
     </stream_meshfile>
-    <!--<stream_datafiles>
-      <file>/glade/scratch/altuntas/mpas_streams/diag_mom6.2013-05-01.nc</file>
-      <file>/glade/scratch/altuntas/mpas_streams/diag_mom6.2013-05-02.nc</file>
-      <file>/glade/scratch/altuntas/mpas_streams/diag_mom6.2013-05-03.nc</file>
-      <file>/glade/scratch/altuntas/mpas_streams/diag_mom6.2013-05-04.nc</file>
-      <file>/glade/scratch/altuntas/mpas_streams/diag_mom6.2013-05-05.nc</file>
-    </stream_datafiles> -->
     <stream_datafiles>
-      <file first_year="1958" last_year="2016">$DIN_LOC_ROOT/ocn/jra55/v1.3_noleap/JRA.v1.3.t_10.TL319.%y.171019.nc</file>
+      <file>/glade/scratch/altuntas/mpas_streams/diag_mom6.2013-05.nc</file>
+      <file>/glade/scratch/altuntas/mpas_streams/diag_mom6.2013-06.nc</file>
+      <file>/glade/scratch/altuntas/mpas_streams/diag_mom6.2013-07.nc</file>
+      <file>/glade/scratch/altuntas/mpas_streams/diag_mom6.2013-08.nc</file>
     </stream_datafiles>
     <stream_datavars>
       <var>u10   Sa_u</var>
@@ -2411,7 +2407,199 @@
     </stream_mapalgo>
     <!-- <stream_vectors>u:v taux:tauy</stream_vectors> -->
     <stream_vectors>u:v</stream_vectors>
-    <stream_year_align>1</stream_year_align>
+    <stream_year_align>2013</stream_year_align>
+    <stream_year_first>2013</stream_year_first>
+    <stream_year_last>2013</stream_year_last>
+    <stream_offset>0</stream_offset>
+    <stream_tintalgo>
+      <tintalgo>linear</tintalgo>
+    </stream_tintalgo>
+    <stream_taxmode>
+      <taxmode>cycle</taxmode>
+    </stream_taxmode>
+    <stream_dtlimit>
+      <dtlimit>1.5</dtlimit>
+    </stream_dtlimit>
+    <stream_readmode>single</stream_readmode>
+  </stream_entry>
+
+  <stream_entry name="MEP13_JRA.PREC">
+    <stream_meshfile>
+      <meshfile>$DIN_LOC_ROOT/share/meshes/TL319_151007_ESMFmesh.nc</meshfile>
+    </stream_meshfile>
+    <stream_datafiles>
+      <file>$DIN_LOC_ROOT/ocn/jra55/v1.3_noleap/JRA.v1.3.prec.TL319.2013.171019.nc</file>
+    </stream_datafiles>
+    <stream_datavars>
+      <var>prec  Faxa_prec</var>
+    </stream_datavars>
+    <stream_lev_dimname>null</stream_lev_dimname>
+    <stream_mapalgo>
+      <mapalgo>bilinear</mapalgo>
+      <mapalgo model_grid="1x1">nn</mapalgo>
+    </stream_mapalgo>
+    <stream_vectors>u:v</stream_vectors>
+    <stream_year_align>2013</stream_year_align>
+    <stream_year_first>2013</stream_year_first>
+    <stream_year_last>2013</stream_year_last>
+    <stream_offset>0</stream_offset>
+    <stream_tintalgo>
+      <tintalgo>linear</tintalgo>
+    </stream_tintalgo>
+    <stream_taxmode>
+      <taxmode>cycle</taxmode>
+    </stream_taxmode>
+    <stream_dtlimit>
+      <dtlimit>1.5</dtlimit>
+    </stream_dtlimit>
+    <stream_readmode>single</stream_readmode>
+  </stream_entry>
+
+  <stream_entry name="MEP13_JRA.LWDN">
+    <stream_meshfile>
+      <meshfile>$DIN_LOC_ROOT/share/meshes/TL319_151007_ESMFmesh.nc</meshfile>
+    </stream_meshfile>
+    <stream_datafiles>
+      <file>$DIN_LOC_ROOT/ocn/jra55/v1.3_noleap/JRA.v1.3.lwdn.TL319.2013.171019.nc</file>
+    </stream_datafiles>
+    <stream_datavars>
+      <var>lwdn  Faxa_lwdn</var>
+    </stream_datavars>
+    <stream_lev_dimname>null</stream_lev_dimname>
+    <stream_mapalgo>
+      <mapalgo>bilinear</mapalgo>
+      <mapalgo model_grid="1x1">nn</mapalgo>
+    </stream_mapalgo>
+    <stream_vectors>u:v</stream_vectors>
+    <stream_year_align>2013</stream_year_align>
+    <stream_year_first>2013</stream_year_first>
+    <stream_year_last>2013</stream_year_last>
+    <stream_offset>0</stream_offset>
+    <stream_tintalgo>
+      <tintalgo>linear</tintalgo>
+    </stream_tintalgo>
+    <stream_taxmode>
+      <taxmode>cycle</taxmode>
+    </stream_taxmode>
+    <stream_dtlimit>
+      <dtlimit>1.5</dtlimit>
+    </stream_dtlimit>
+    <stream_readmode>single</stream_readmode>
+  </stream_entry>
+
+  <stream_entry name="MEP13_JRA.SWDN">
+    <stream_meshfile>
+      <meshfile>$DIN_LOC_ROOT/share/meshes/TL319_151007_ESMFmesh.nc</meshfile>
+    </stream_meshfile>
+    <stream_datafiles>
+      <file>$DIN_LOC_ROOT/ocn/jra55/v1.3_noleap/JRA.v1.3.swdn.TL319.2013.171019.nc</file>
+    </stream_datafiles>
+    <stream_datavars>
+      <var>swdn  Faxa_swdn</var>
+    </stream_datavars>
+    <stream_lev_dimname>null</stream_lev_dimname>
+    <stream_mapalgo>
+      <mapalgo>bilinear</mapalgo>
+      <mapalgo model_grid="1x1">nn</mapalgo>
+    </stream_mapalgo>
+    <stream_vectors>u:v</stream_vectors>
+    <stream_year_align>2013</stream_year_align>
+    <stream_year_first>2013</stream_year_first>
+    <stream_year_last>2013</stream_year_last>
+    <stream_offset>-5400</stream_offset>
+    <stream_tintalgo>
+      <tintalgo>coszen</tintalgo>
+    </stream_tintalgo>
+    <stream_taxmode>
+      <taxmode>cycle</taxmode>
+    </stream_taxmode>
+    <stream_dtlimit>
+      <dtlimit>1.5</dtlimit>
+    </stream_dtlimit>
+    <stream_readmode>single</stream_readmode>
+  </stream_entry>
+
+  <stream_entry name="MEP13_JRA.Q_10">
+    <stream_meshfile>
+      <meshfile>$DIN_LOC_ROOT/share/meshes/TL319_151007_ESMFmesh.nc</meshfile>
+    </stream_meshfile>
+    <stream_datafiles>
+      <file>$DIN_LOC_ROOT/ocn/jra55/v1.3_noleap/JRA.v1.3.q_10.TL319.2013.171019.nc</file>
+    </stream_datafiles>
+    <stream_datavars>
+      <var>q_10  Sa_shum</var>
+    </stream_datavars>
+    <stream_lev_dimname>null</stream_lev_dimname>
+    <stream_mapalgo>
+      <mapalgo>bilinear</mapalgo>
+      <mapalgo model_grid="1x1">nn</mapalgo>
+    </stream_mapalgo>
+    <stream_vectors>u:v</stream_vectors>
+    <stream_year_align>2013</stream_year_align>
+    <stream_year_first>2013</stream_year_first>
+    <stream_year_last>2013</stream_year_last>
+    <stream_offset>0</stream_offset>
+    <stream_tintalgo>
+      <tintalgo>linear</tintalgo>
+    </stream_tintalgo>
+    <stream_taxmode>
+      <taxmode>cycle</taxmode>
+    </stream_taxmode>
+    <stream_dtlimit>
+      <dtlimit>1.5</dtlimit>
+    </stream_dtlimit>
+    <stream_readmode>single</stream_readmode>
+  </stream_entry>
+
+  <stream_entry name="MEP13_JRA.SLP_">
+    <stream_meshfile>
+      <meshfile>$DIN_LOC_ROOT/share/meshes/TL319_151007_ESMFmesh.nc</meshfile>
+    </stream_meshfile>
+    <stream_datafiles>
+      <file>$DIN_LOC_ROOT/ocn/jra55/v1.3_noleap/JRA.v1.3.slp.TL319.2013.171019.nc</file>
+    </stream_datafiles>
+    <stream_datavars>
+      <var>slp   Sa_pslv</var>
+    </stream_datavars>
+    <stream_lev_dimname>null</stream_lev_dimname>
+    <stream_mapalgo>
+      <mapalgo>bilinear</mapalgo>
+      <mapalgo model_grid="1x1">nn</mapalgo>
+    </stream_mapalgo>
+    <stream_vectors>u:v</stream_vectors>
+    <stream_year_align>2013</stream_year_align>
+    <stream_year_first>2013</stream_year_first>
+    <stream_year_last>2013</stream_year_last>
+    <stream_offset>0</stream_offset>
+    <stream_tintalgo>
+      <tintalgo>linear</tintalgo>
+    </stream_tintalgo>
+    <stream_taxmode>
+      <taxmode>cycle</taxmode>
+    </stream_taxmode>
+    <stream_dtlimit>
+      <dtlimit>1.5</dtlimit>
+    </stream_dtlimit>
+    <stream_readmode>single</stream_readmode>
+  </stream_entry>
+
+  <stream_entry name="MEP13_JRA.T_10">
+    <stream_meshfile>
+      <meshfile>$DIN_LOC_ROOT/share/meshes/TL319_151007_ESMFmesh.nc</meshfile>
+    </stream_meshfile>
+    <stream_datafiles>
+      <file>$DIN_LOC_ROOT/ocn/jra55/v1.3_noleap/JRA.v1.3.t_10.TL319.2013.171019.nc</file>
+    </stream_datafiles>
+    <stream_datavars>
+      <var>t_10  Sa_tbot</var>
+    </stream_datavars>
+    <stream_lev_dimname>null</stream_lev_dimname>
+    <stream_mapalgo>
+      <mapalgo>bilinear</mapalgo>
+      <mapalgo model_grid="1x1">nn</mapalgo>
+    </stream_mapalgo>
+    <stream_vectors>u:v</stream_vectors>
+    <stream_year_align>2013</stream_year_align>
     <stream_year_first>2013</stream_year_first>
     <stream_year_last>2013</stream_year_last>
     <stream_offset>0</stream_offset>

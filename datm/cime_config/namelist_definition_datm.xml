@@ -54,7 +54,7 @@
         ERA5_HOURLY
       </value>
       <value datm_mode="MEP13">
-        MEP13.UV,CORE_IAF_JRA.PREC,CORE_IAF_JRA.LWDN,CORE_IAF_JRA.SWDN,CORE_IAF_JRA.Q_10,CORE_IAF_JRA.SLP_,CORE_IAF_JRA.T_10,CORE_IAF_JRA.CORE2.ArcFactor
+        MEP13.UV,MEP13_JRA.PREC,MEP13_JRA.LWDN,MEP13_JRA.SWDN,MEP13_JRA.Q_10,MEP13_JRA.SLP_,MEP13_JRA.T_10,CORE_IAF_JRA.CORE2.ArcFactor
       </value>
       <value datm_mode="CPLHIST">
         CPLHISTForcing.Solar,CPLHISTForcing.nonSolarFlux,CPLHISTForcing.State3hr,CPLHISTForcing.State1hr
